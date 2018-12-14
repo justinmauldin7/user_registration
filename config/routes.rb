@@ -4,4 +4,10 @@ Rails.application.routes.draw do
   root "welcome#index"
 
   resources :users, only: [:new, :index, :show, :create]
+
+  get '/login', to: 'sessions#new'
+
+  post '/login', to: 'sessions#create'
+
+  delete '/login', to: 'sessions#destroy'
 end

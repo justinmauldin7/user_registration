@@ -1,14 +1,5 @@
 <h1>Welcome to my site!</h1>
 
-<div class="login">
-  <h3>Please login:</h3>
-  <%= form_for @user do |f| %>
-    <% f.label :username %>
-    <% f.text_field :username %>
-    <% f.label :password %>
-    <% f.password_field :password %>
-    <% f.submit "Login" %>
-  <% end %>
-  </div>
+<%= link_to "I already have an account", login_path %>
 
-  <%= link_to "Sign Up to Be a User", new_user_path %>
+<%= link_to "Sign Up to Be a User", new_user_path %>
